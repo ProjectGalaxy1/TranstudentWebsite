@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+:root {
+     /* Font */
+     --Font1: "Poppins";
+     --Font2: "Plus Jakarta Sans";
+
+     /* Color */
+     --Primary: #FED04D;
+     --Secondary: #F5F5F5;
+     --Tertiary1: #333333;
+     --Tertiary2: #2B2B2B;
+
+     /* Size-Font */
+     --Very-Big: 4rem;
+     --Big: 3.25rem;
+     --Very-Medium: 2.625rem;
+     --Medium: 2rem;
+     --Small: 1rem;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+* {
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     list-style: none;
+}
+
+body {
+     background-color: var(--Tertiary2);
+     margin: 0 80px;
+     display: grid;
+     grid-template-areas:
+          'title'
+          'konten';
+     grid-template-columns: 1fr;
+     grid-template-rows: 120px 3fr;
+}
+
+.title {
+     grid-area: 'title';
+     text-align: center;
+     padding-top: 20px;
+     color: var(--Secondary);
+}
+
+.back-arrow a {
+     display: flex;
+     text-align: center;
+     justify-content: center;
+     color: var(--Primary);
+     gap: 20px;
+     align-items: center;
+     font-family: var(--Font2);
+     transition: all 0.3s ease-in-out;
+}
+
+.back-arrow a:hover {
+     gap: 40px;
+}
+
+.text-title {
+     font-family: var(--Font1);
+     margin-bottom: 10px;
+}
+
+.konten-angkutan {
+     grid-area: "konten";
+     display: flex;
+     background-image: url(../assets/bg-angkutan.svg);
+     background-position: center;
+     background-repeat: no-repeat;
+     margin: 0 -80px;
+     padding: 60px 80px;
+     justify-content: center;
+     gap: 120px;
+}
+
+.konten-angkutan-responsive{
+     display: none;
+}
+
+.linked {
+     color: var(--Secondary);
+     font-family: var(--Font1);
+     font-size: 1.25rem;
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 80px;
+}
+
+.linked::after {
+     margin: 10px auto;
+     content: "";
+     background-color: var(--Primary);
+     height: 0;
+     width: 100%;
+     border-radius: 100px;
+     display: block;
+     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.linked:hover {
+     color: var(--Primary);
+}
+
+.linked:hover::after {
+     height: 3px;
+}
+
+.active {
+     color: var(--Primary);
+     transition: ease-in-out 0.5s;
+}
+
+.active::after {
+     margin: 10px auto;
+     content: "";
+     background-color: var(--Primary);
+     height: 3px;
+     width: 100%;
+     border-radius: 100px;
+     display: block;
+     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.indikator {
+     margin-left: -40px;
+}
+
+.title-indikator {
+     font-family: var(--Font1);
+     font-size: 1.7rem;
+     color: var(--Primary);
+     margin-left: 25px;
+}
+
+.penjelasan {
+     color: var(--Secondary);
+     font-family: var(--Font2);
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 150%;
+     text-transform: none;
+     margin-left: 25px;
+     margin-top: -30px;
+}
+
+.gambar-angkutan{
+     animation: angkot infinite 2s ease-in-out;
+}
+
+@keyframes angkot {
+     50% {
+          transform: translateY(30px);
+     }
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 760px) {
+     .text-title {
+          font-family: var(--Font1);
+          margin-bottom: 10px;
+          font-size: 1.2rem;
+     }
+
+     .back-arrow a {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          color: var(--Primary);
+          gap: 20px;
+          align-items: center;
+          font-family: var(--Font2);
+          transition: all 0.3s ease-in-out;
+          font-size: 12px;
+     }
+
+     .konten-angkutan{
+          display: none;
+     }
+     
+     .konten-angkutan-responsive{
+          display: block;
+     }
+
+     .indikator-responsive {
+          margin-left: -40px;
+          background-color: var(--Tertiary1);
+          padding: 20px 10px;
+          border-radius: 20px;
+          
+     }
+     
+     .title-indikator-responsive {
+          font-family: var(--Font1);
+          font-size: 1rem;
+          color: var(--Primary);
+          margin-left: 25px;
+          margin-bottom: 10px;
+     }
+     
+     .penjelasan-responsive {
+          color: var(--Secondary);
+          font-family: var(--Font2);
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+          text-transform: none;
+          margin-left: 25px;
+     }
+     
+     .gambar-angkutan-responsive{
+          animation: angkot infinite 2s ease-in-out;
+          margin-left: -40px;
+     }
+
+     .linked{
+          display: none;
+     }
+}

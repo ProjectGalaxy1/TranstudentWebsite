@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap");
+body {
+  background-color: #2b2b2b;
+}
+
+.table-jadwal {
+  margin: 50px 40px;
+}
+
+.title-jadwal {
+  text-align: center;
+  justify-content: center;
+}
+
+.sub-judul {
+  color: var(--kuning, #fed04d);
+  font-family: Plus Jakarta Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.garis {
+  height: 3px;
+  width: 20%;
+  background-color: var(--kuning, #fed04d);
+  margin: 20px auto;
+}
+
+.judul {
+  color: var(--natural-9, #f5f5f5);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 137.5%; /* 66px */
+  letter-spacing: 0.96px;
+  text-transform: capitalize;
+}
+
+.p{
+    color: var(--natural-4, #757575);
+    font-family: Plus Jakarta Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+} 
+
+i{
+    color: #757575;
+}
+
+a{
+    text-decoration: none;
+    color: #fed04d;
+    font-family: Plus Jakarta Sans;
+}
+
+.table-jadwal-responsive{
+  display: none;
+}
+
+@media only screen and (max-width: 760px) {
+  .judul {
+    color: var(--natural-9, #f5f5f5);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1.7rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 137.5%; /* 66px */
+    letter-spacing: 0.96px;
+    text-transform: capitalize;
+  }
+  
+  .p{
+      color: var(--natural-4, #757575);
+      font-family: Plus Jakarta Sans;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+  } 
+
+  .table-jadwal{
+    display: none;
+  }
+
+  .table-jadwal-responsive{
+    display: block;
+  }
+}

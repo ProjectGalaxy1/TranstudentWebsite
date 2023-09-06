@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+:root {
+     /* Font */
+     --Font1: "Poppins";
+     --Font2: "Plus Jakarta Sans";
+
+     /* Color */
+     --Primary: #FED04D;
+     --Secondary: #F5F5F5;
+     --Tertiary1: #333333;
+     --Tertiary2: #2B2B2B;
+
+     /* Size-Font */
+     --Very-Big: 4rem;
+     --Big: 3.25rem;
+     --Very-Medium: 2.625rem;
+     --Medium: 2rem;
+     --Small: 1rem;
+}
+
+html {
+     scroll-behavior: smooth;
+}
+
+* {
+     margin: 0;
+     padding: 0;
+     text-decoration: none;
+     list-style: none;
+}
+
+body {
+     background-color: var(--Tertiary2);
+     margin: 60px 80px;
+     display: grid;
+     grid-template-areas:
+          'Home About'
+          'Back Back';
+     grid-template-columns: 2fr 1fr;
+     grid-template-rows: 3fr 20px;
+}
+
+.title-berita {
+     margin-top: 20px;
+     font-size: 1.7rem;
+     color: var(--Secondary);
+     font-family: var(--Font1);
+     margin-bottom: 10px;
+}
+
+.source{
+     color: var(--Primary);
+     font-family: var(--Font2);
+     font-weight: 200;
+}
+
+.waktu{
+     color: var(--Secondary);
+     font-family: var(--Font2);
+     font-weight: 200;
+     margin-bottom: 10px;
+}
+
+.deskripsi{
+     color: var(--Secondary);
+     font-family: var(--Font2);
+     opacity: 60%;
+}
+
+.content-right{
+     padding: 0 40px;
+}
+
+.title h1{
+     color: var(--Secondary);
+     font-family: var(--Font2);
+     margin-bottom: 10px;
+}
+
+.garis-title{
+     background-color: var(--Primary);
+     height: 5px;
+     width: 100%;
+     border: none;
+     border-radius: 15px;
+     margin-bottom: 20px;
+}
+
+.hari{
+     font-size: 12px;
+     font-weight: 200;
+     font-family: var(--Font2);
+     color: var(--Primary);
+     margin-bottom: 10px;
+}
+
+.title-list-berita{
+     font-family: var(--Font1);
+     color: var(--Secondary);
+     font-size: 1.2rem;
+     margin-bottom: 15px;
+     font-weight: 500;
+}
+
+.garis-list-berita{
+     background-color: var(--Secondary);
+     height: 1px;
+     width: 100%;
+     border: none;
+     border-radius: 15px;
+     margin-bottom: 20px;
+     opacity: 60%;
+}
+
+.back a {
+     display: flex;
+     color: var(--Primary);
+     gap: 20px;
+     align-items: center;
+     font-family: var(--Font2);
+     transition: all 0.3s ease-in-out;
+}
+
+.back a:hover {
+     gap: 40px;
+}
